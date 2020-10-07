@@ -1,0 +1,25 @@
+jouer_ia(noeud, profondeur, max)
+	si profondeur = 0 ou personne ne peut jouer
+		return la valeur heuristique du noeud
+
+	si max
+		meilleur =-32
+		pour chaque fils du noeud
+			v = jouer_ia(fils, profondeur-1, FALSE)
+			meilleur = max(meilleur, v)
+        	return meilleur
+
+	sinon
+		meilleur = 32
+		pour chaque fils du noeud
+			v = jouer_ia(fils, profondeur-1, TRUE)
+			meilleur = min(meilleur, v)
+		return meilleur
+
+		
+		
+		
+
+		
+	
+	
